@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://masterruma.github.io/micro_timer">
+    <title>Document</title>
+    <script>
+
+        function Calc(M, S, R) {
+            time = parseInt(M) + parseInt(S);
+            watt = time * R;
+            return watt
+        }
+        
+        function W1000_Calc() {
+            try {
+
+                if (document.getElementById("1000W-M").value == "") {
+                    document.getElementById("1000W-M").value = 0;
+                }
+                if (document.getElementById("1000W-S").value == "") {
+                    document.getElementById("1000W-S").value = 0;
+                }
+
+                miniute = document.getElementById("1000W-M").value * 60;
+                second = document.getElementById("1000W-S").value;
+                
+                Calc(miniute, second, 1000);
+
+                if (isNaN(watt)) {
+                    document.getElementById("warn").textContent = "오류 발생! 숫자만 입력하십시오."
+                    return;
+                }
+                
+                W900 = Math.floor(watt / 900);
+                W900_M = Math.floor(W900 / 60);
+                W900_S = W900 % 60;
+
+                W800 = Math.floor(watt / 800);
+                W800_M = Math.floor(W800 / 60);
+                W800_S = W800 % 60;
+
+                W700 = Math.floor(watt / 700);
+                W700_M = Math.floor(W700 / 60);
+                W700_S = W700 % 60;
+
+                W600 = Math.floor(watt / 600);
+                W600_M = Math.floor(W600 / 60);
+                W600_S = W600 % 60;
+
+                document.getElementById("900W-M").value = W900_M;
+                document.getElementById("900W-S").value = W900_S;
+
+                document.getElementById("800W-M").value = W800_M;
+                document.getElementById("800W-S").value = W800_S;
+
+                document.getElementById("700W-M").value = W700_M;
+                document.getElementById("700W-S").value = W700_S;
+
+                document.getElementById("600W-M").value = W600_M;
+                document.getElementById("600W-S").value = W600_S;
+
+                document.getElementById("warn").textContent = "";
+                
+
+            } catch (error) {
+                document.getElementById("warn").textContent = error
+            }
+        }
+        function W900_Calc() {
+            try {
+
+                if (document.getElementById("900W-M").value == "") {
+                    document.getElementById("900W-M").value = 0;
+                }
+                if (document.getElementById("900W-S").value == "") {
+                    document.getElementById("900W-S").value = 0;
+                }
+
+                miniute = document.getElementById("900W-M").value * 60;
+                second = document.getElementById("900W-S").value;
+                
+                Calc(miniute, second, 900);
+
+                if (isNaN(watt)) {
+                    document.getElementById("warn").textContent = "오류 발생! 숫자만 입력하십시오."
+                    return;
+                }
+                
+                W1000 = Math.floor(watt / 1000);
+                W1000_M = Math.floor(W1000 / 60);
+                W1000_S = W1000 % 60;
+
+                W800 = Math.floor(watt / 800);
+                W800_M = Math.floor(W800 / 60);
+                W800_S = W800 % 60;
+
+                W700 = Math.floor(watt / 700);
+                W700_M = Math.floor(W700 / 60);
+                W700_S = W700 % 60;
+
+                W600 = Math.floor(watt / 600);
+                W600_M = Math.floor(W600 / 60);
+                W600_S = W600 % 60;
+
+                document.getElementById("1000W-M").value = W1000_M;
+                document.getElementById("1000W-S").value = W1000_S;
+
+                document.getElementById("800W-M").value = W800_M;
+                document.getElementById("800W-S").value = W800_S;
+
+                document.getElementById("700W-M").value = W700_M;
+                document.getElementById("700W-S").value = W700_S;
+
+                document.getElementById("600W-M").value = W600_M;
+                document.getElementById("600W-S").value = W600_S;
+
+                document.getElementById("warn").textContent = "";
+                
+
+            } catch (error) {
+                document.getElementById("warn").textContent = error
+            }
+        }
+        function W800_Calc() {
+            try {
+
+                if (document.getElementById("800W-M").value == "") {
+                    document.getElementById("800W-M").value = 0;
+                }
+                if (document.getElementById("800W-S").value == "") {
+                    document.getElementById("800W-S").value = 0;
+                }
+
+                miniute = document.getElementById("800W-M").value * 60;
+                second = document.getElementById("800W-S").value;
+                
+                Calc(miniute, second, 800);
+
+                if (isNaN(watt)) {
+                    document.getElementById("warn").textContent = "오류 발생! 숫자만 입력하십시오."
+                    return;
+                }
+                
+                W1000 = Math.floor(watt / 1000);
+                W1000_M = Math.floor(W1000 / 60);
+                W1000_S = W1000 % 60;
+
+                W900 = Math.floor(watt / 900);
+                W900_M = Math.floor(W900 / 60);
+                W900_S = W900 % 60;
+
+                W700 = Math.floor(watt / 700);
+                W700_M = Math.floor(W700 / 60);
+                W700_S = W700 % 60;
+
+                W600 = Math.floor(watt / 600);
+                W600_M = Math.floor(W600 / 60);
+                W600_S = W600 % 60;
+
+                document.getElementById("1000W-M").value = W1000_M;
+                document.getElementById("1000W-S").value = W1000_S;
+
+                document.getElementById("900W-M").value = W900_M;
+                document.getElementById("900W-S").value = W900_S;
+
+                document.getElementById("700W-M").value = W700_M;
+                document.getElementById("700W-S").value = W700_S;
+
+                document.getElementById("600W-M").value = W600_M;
+                document.getElementById("600W-S").value = W600_S;
+
+                document.getElementById("warn").textContent = "";
+                
+
+            } catch (error) {
+                document.getElementById("warn").textContent = error
+            }
+        }
+        function W700_Calc() {
+            try {
+
+                if (document.getElementById("700W-M").value == "") {
+                    document.getElementById("700W-M").value = 0;
+                }
+                if (document.getElementById("700W-S").value == "") {
+                    document.getElementById("700W-S").value = 0;
+                }
+
+                miniute = document.getElementById("700W-M").value * 60;
+                second = document.getElementById("700W-S").value;
+                
+                Calc(miniute, second, 700);
+
+                if (isNaN(watt)) {
+                    document.getElementById("warn").textContent = "오류 발생! 숫자만 입력하십시오."
+                    return;
+                }
+                
+                W1000 = Math.floor(watt / 1000);
+                W1000_M = Math.floor(W1000 / 60);
+                W1000_S = W1000 % 60;
+
+                W900 = Math.floor(watt / 900);
+                W900_M = Math.floor(W900 / 60);
+                W900_S = W900 % 60;
+
+                W800 = Math.floor(watt / 800);
+                W800_M = Math.floor(W800 / 60);
+                W800_S = W800 % 60;
+
+                W600 = Math.floor(watt / 600);
+                W600_M = Math.floor(W600 / 60);
+                W600_S = W600 % 60;
+
+                document.getElementById("1000W-M").value = W1000_M;
+                document.getElementById("1000W-S").value = W1000_S;
+
+                document.getElementById("900W-M").value = W900_M;
+                document.getElementById("900W-S").value = W900_S;
+
+                document.getElementById("800W-M").value = W800_M;
+                document.getElementById("800W-S").value = W800_S;
+
+                document.getElementById("600W-M").value = W600_M;
+                document.getElementById("600W-S").value = W600_S;
+
+                document.getElementById("warn").textContent = "";
+                
+
+            } catch (error) {
+                document.getElementById("warn").textContent = error
+            }
+        }
+        function W600_Calc() {
+            try {
+
+                if (document.getElementById("600W-M").value == "") {
+                    document.getElementById("600W-M").value = 0;
+                }
+                if (document.getElementById("600W-S").value == "") {
+                    document.getElementById("600W-S").value = 0;
+                }
+
+                miniute = document.getElementById("600W-M").value * 60;
+                second = document.getElementById("600W-S").value;
+                
+                Calc(miniute, second, 600);
+
+                if (isNaN(watt)) {
+                    document.getElementById("warn").textContent = "오류 발생! 숫자만 입력하십시오."
+                    return;
+                }
+                
+                W1000 = Math.floor(watt / 1000);
+                W1000_M = Math.floor(W1000 / 60);
+                W1000_S = W1000 % 60;
+
+                W900 = Math.floor(watt / 900);
+                W900_M = Math.floor(W900 / 60);
+                W900_S = W900 % 60;
+
+                W800 = Math.floor(watt / 800);
+                W800_M = Math.floor(W800 / 60);
+                W800_S = W800 % 60;
+
+                W700 = Math.floor(watt / 700);
+                W700_M = Math.floor(W700 / 60);
+                W700_S = W700 % 60;
+
+                document.getElementById("1000W-M").value = W1000_M;
+                document.getElementById("1000W-S").value = W1000_S;
+
+                document.getElementById("900W-M").value = W900_M;
+                document.getElementById("900W-S").value = W900_S;
+
+                document.getElementById("800W-M").value = W800_M;
+                document.getElementById("800W-S").value = W800_S;
+
+                document.getElementById("700W-M").value = W700_M;
+                document.getElementById("700W-S").value = W700_S;
+
+                document.getElementById("warn").textContent = "";
+                
+
+            } catch (error) {
+                document.getElementById("warn").textContent = error
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 500px;
+            margin: 0% 15% 15% 15% auto;
+            padding: 20px;
+            border-radius: 25px;
+            border: 1px dashed grey;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .watt {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .watt a {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input.M, input.S {
+            width: 40px;
+            text-align: center;
+            margin: 0 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input.M {
+            margin-right: 0;
+        }
+
+        input.S {
+            margin-left: 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #004080;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .warning {
+            color: red;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>전자레인지 와트 계산기</h1>
+
+    <div class="container">
+        <div class="watt">
+            <a>1000W</a>
+            <input type="text" id="1000W-M" class="M" maxlength="3" />
+            <a>분</a>
+            <input type="text" id="1000W-S" class="S" maxlength="2" />
+            <a>초</a>
+            <button onclick="W1000_Calc()">계산</button> 
+        </div>
+        
+        <div class="watt">
+            <a>900W</a>
+            <input type="text" id="900W-M" class="M" maxlength="3" />
+            <a>분</a>
+            <input type="text" id="900W-S" class="S" maxlength="2" />
+            <a>초</a>
+            <button onclick="W900_Calc()">계산</button> 
+        </div>
+        
+        <div class="watt">
+            <a>800W</a>
+            <input type="text" id="800W-M" class="M" maxlength="3" />
+            <a>분</a>
+            <input type="text" id="800W-S" class="S" maxlength="2" />
+            <a>초</a>
+            <button onclick="W800_Calc()">계산</button> 
+        </div>
+        
+        <div class="watt">
+            <a>700W</a>
+            <input type="text" id="700W-M" class="M" maxlength="3" />
+            <a>분</a>
+            <input type="text" id="700W-S" class="S" maxlength="2" />
+            <a>초</a>
+            <button onclick="W700_Calc()">계산</button> 
+        </div>
+        
+        <div class="watt">
+            <a>600W</a>
+            <input type="text" id="600W-M" class="M" maxlength="3" />
+            <a>분</a>
+            <input type="text" id="600W-S" class="S" maxlength="2" />
+            <a>초</a>
+            <button onclick="W600_Calc()">계산</button> 
+        </div>
+    </div>
+
+    <div class="warning" id="warn"></div>
+
+    <div>
+        <h3>왜 필요할까?</h3>
+        <p>전자레인지의 와트별 시간 계산기는 조리의 정확성을 높여줍니다. 다양한 전자레인지가 서로 다른 와트를 가지므로, 같은 음식이라도 조리 시간은 다를 수 있습니다. 이 계산기는 음식이 최적의 상태로 조리되도록 도와주어, 최상의 결과를 얻기 위해 시간을 정확하게 계산할 수 있게 해줍니다.</p>
+        
+        <h3>계산 공식</h3>
+        <p>전자레인지 조리 시간을 조정하기 위해, 아래 공식을 사용할 수 있습니다:</p>
+        <p><strong>조리 시간 (새 전자레인지) = 조리 시간 (기존 전자레인지) × (기존 전자레인지 와트 / 새 전자레인지 와트)</strong></p>
+        
+        <p>예를 들어, 700와트의 전자레인지에서 5분 동안 조리해야 하는 음식을 1000와트의 전자레인지에서 조리하려면:</p>
+        <p><strong>조리 시간 (1000W) = 5분 × (700 / 1000) = 3.5분</strong></p>
+        
+        <p>이 공식을 통해 조리 시간을 쉽게 계산하여 음식이 적절하게 조리될 수 있도록 도와줍니다.</p>
+      </div>
+      
+</body>
+</html>
